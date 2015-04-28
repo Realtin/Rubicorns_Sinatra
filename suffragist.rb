@@ -20,8 +20,7 @@ post '/cast' do
   p @name
   @store = YAML::Store.new 'eyeshadows.yml'
   @store.transaction do
-    @store['name'] ||= {}
-    #@store['name'][@name] ||= 0
+    @store['name'][@name] ||= {}
   end
   erb :cast
 end
