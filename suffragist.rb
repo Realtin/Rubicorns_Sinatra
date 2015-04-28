@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'yaml/store'
+require "sinatra/reloader"
 
 get '/' do
   @title = 'Show me the Sparkle!'
@@ -9,7 +10,7 @@ end
 get '/results' do
   @title = 'Results so far:'
   @store = YAML::Store.new 'eyeshadows.yml'
-  @name = @store.transaction { @store['name'] }
+  @casts = @store.transaction { @store['casts'] || []}
   erb :results
 end
 
@@ -20,7 +21,8 @@ post '/cast' do
   p @name
   @store = YAML::Store.new 'eyeshadows.yml'
   @store.transaction do
-    @store['name'][@name] ||= {}
+    @store['casts'] ||= []
+    @store['casts'] << @name
   end
   erb :cast
 end
