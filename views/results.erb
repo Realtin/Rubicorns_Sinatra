@@ -1,7 +1,8 @@
 <table class='table table-hover table-striped'>
-  <% @name.each do |text| %>
+  <% eyeshadows.each do |eyeshadow| %>
     <tr>
-      <th><%= text %></th>
+      <th><%= eyeshadow.name %></th>
+      <th><%= eyeshadow.color %></th>
     </tr>
   <% end %>
 </table>

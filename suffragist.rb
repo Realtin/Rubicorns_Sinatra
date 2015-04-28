@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'yaml/store'
+require './eyeshadow'
 
 get '/' do
   @title = 'Show me the Sparkle!'
@@ -7,22 +8,17 @@ get '/' do
 end
 
 get '/results' do
-  @title = 'Results so far:'
-  @store = YAML::Store.new 'eyeshadows.yml'
-  @name = @store.transaction { @store['name'] }
-  erb :results
+  @title = 'Shadows so far:'
+
+  erb :results ,locals: {eyeshadows: Eyeshadow.all}
 end
 
 post '/cast' do
-  @title = 'Thanks for casting your vote!'
-  #@vote  = params['vote']
-  @name = params['name']
-  p @name
-  @store = YAML::Store.new 'eyeshadows.yml'
-  @store.transaction do
-    @store['name'] ||= {}
-    #@store['name'][@name] ||= 0
-  end
+  @title = 'Thanks for adding more sparkles!!'
+  p params['name']
+  p params['color']
+  @eyeshadow = Eyeshadow.new(params['name'], params['color'])
+  @eyeshadow.save
   erb :cast
 end
 
