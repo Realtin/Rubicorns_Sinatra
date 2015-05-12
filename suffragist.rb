@@ -18,12 +18,13 @@ post '/cast' do
   @title = 'Thanks for casting your vote!'
   #@vote  = params['vote']
   @name = params['name']
+  @company = params['company']
   @color = params['color']
   p @name
   @store = YAML::Store.new 'eyeshadows.yml'
   @store.transaction do
     @store['casts'] ||= []
-    @store['casts'] << Eyeshadow.new(@name, "x", @color)
+    @store['casts'] << Eyeshadow.new(@name, @company, @color)
   end
   erb :cast
 end

@@ -1,11 +1,13 @@
 <table class='table table-hover table-striped'>
   <tr>
     <th>Name</th>
+    <th>Company</th>
     <th>Color</th>
   </tr>
   <% @casts.each do |cast| %>
     <tr>
       <td><%= cast.name %></td>
+      <td><%= cast.company %></td>
       <td><%= cast.color %></td>
     </tr>
   <% end %>
