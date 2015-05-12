@@ -1,8 +1,12 @@
 <table class='table table-hover table-striped'>
-  <% @casts.each do |text| %>
+  <tr>
+    <th>Name</th>
+    <th>Color</th>
+  </tr>
+  <% @casts.each do |cast| %>
     <tr>
-      <th><%= text[:name] %></th>
-      <th><%= text[:color] %></th>
+      <td><%= cast.name %></td>
+      <td><%= cast.color %></td>
     </tr>
   <% end %>
 </table>

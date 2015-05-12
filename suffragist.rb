@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'yaml/store'
+require_relative 'eyeshadow'
 
 get '/' do
   @title = 'Show me the Sparkle!'
@@ -22,12 +23,11 @@ post '/cast' do
   @store = YAML::Store.new 'eyeshadows.yml'
   @store.transaction do
     @store['casts'] ||= []
-    @store['casts'] << {:name => @name, :color => @color}
+    @store['casts'] << Eyeshadow.new(@name, "x", @color)
   end
   erb :cast
 end
 
-# Shadows = Struct.new :name, :color
 # Colors = {
 #     :r => 'red'
 #     :ro => 'red-orange'
