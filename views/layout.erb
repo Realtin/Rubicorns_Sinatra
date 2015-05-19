@@ -2,10 +2,15 @@
 <html>
   <head>
     <meta charset='UTF-8' />
-    <title>Suffragist</title>
-    <link href='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css' rel='stylesheet' />
+    <title>Show me the Sparkle!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/sparkle.css" type="text/css">
   </head>
   <body class='container'>
+    <ul class="nav nav-tabs">
+      <li role="presentation"><a href="/">Home</a></li>
+      <li role="presentation"><a href="/results">List</a></li>
+    </ul>
     <h1><%= @title %></h1>
     <%= yield %>
   </body>

@@ -1,17 +1,25 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='UTF-8' />
-    <title>Suffragist</title>
-    <link href='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css' rel='stylesheet' />
-  </head>
-  <body class='container'>
-    <p>Name?</p>
+
+    <form action='cast' method='post'>
+      <div class="input-group input-group-lg">
+        <span class="input-group-addon" id="basic-addon1">Name</span>
+        <input type="text" class="form-control" placeholder="Name" aria-describedby="basic-addon1" name="name">
+      </div>
+      <div class="input-group input-group-lg">
+        <span class="input-group-addon" id="basic-addon2">Company</span>
+        <input type="text" class="form-control" placeholder="Company" aria-describedby="basic-addon2" name="company">
+      </div>
+      <div class="input-group input-group-lg">
+        <span class="input-group-addon" id="basic-addon3">Color</span>
+        <input type="text" class="form-control" placeholder="Color" aria-describedby="basic-addon3" name="color">
+      </div>
+      <button type="submit" class="btn btn-default btn-lg" style="width: 100%;">
+        <span class="glyphicon glyphicon-sunglasses" aria-hidden="true">  Send</span>
+      </button>
+    </form>
+    <!-- <p>Name?</p>
     <form action='cast' method='post'>
       <input type='text' name='name'/>
       <input type='text' name='company'/>
       <input type='text' name='color'/>
       <button type='submit' class='btn btn-primary'>Send!</button>
-    </form>
-  </body>
-</html>
+    </form> -->
