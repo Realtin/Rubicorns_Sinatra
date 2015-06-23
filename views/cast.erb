@@ -9,6 +9,9 @@
     <p>Eyeshadow: <%= @name %></p>
     <p>Company: <%= @company %></p>
     <p>Color: <%= @color %></p>
+    <% if @photo.image_uid != nil %>
+      <p><img src=<%= @photo_url %> alt="" class="circle"></p>
+    <% end %>
     <p><a href='/results'>See the results!</a></p>
   </body>
 </html>

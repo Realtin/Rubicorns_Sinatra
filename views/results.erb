@@ -1,7 +1,11 @@
 <ul class="collection">
   <% @casts.each do |cast| %>
     <li class="collection-item avatar">
-      <img src="https://placekitten.com/g/200/250" alt="" class="circle">
+      <% if cast.image_uid != nil %>
+        <img src=<%= cast.image_uid %> alt="" class="circle">
+      <% else %>
+        <img src="https://placekitten.com/g/200/250" alt="" class="circle">
+      <% end %>
       <span class="title"><%= cast.name %></span>
       <p><%= cast.company %><br>
          <%= cast.color %>

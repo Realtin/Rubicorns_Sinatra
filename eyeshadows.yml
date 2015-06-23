@@ -36,3 +36,38 @@ casts:
   name: ''
   company: ''
   color: ''
+- !ruby/object:Eyeshadow
+  name: Doge
+  company: Doge Corp.
+  color: Beige
+  image_uid: dragonfly2015/06/23/9hasnpf78s_photo.png
+- !ruby/object:Eyeshadow
+  name: Doge
+  company: Doge Corp.
+  color: Beige
+  image_uid: dragonfly2015/06/23/7uvb0tgqyf_photo.png
+- !ruby/object:Eyeshadow
+  name: Doge
+  company: Doge Corp.
+  color: Beige
+  image_uid: dragonfly2015/06/23/6obvn7zc95_photo.png
+- !ruby/object:Eyeshadow
+  name: Doge
+  company: Doge Corp.
+  color: Beige
+  image_uid: dragonfly2015/06/23/2xi100ad15_photo.png
+- !ruby/object:Eyeshadow
+  name: Doge
+  company: Doge Corp.
+  color: Beige
+  image_uid: dragonfly2015/06/23/8y7fwpbo7u_photo.png
+- !ruby/object:Eyeshadow
+  name: Doge
+  company: Doge Corp.
+  color: Beige
+  image_uid: /W1siZiIsIjIwMTUvMDYvMjMvNGlncmY2cDN4c19waG90by5wbmciXV0?sha=5d5f294007811eb0
+- !ruby/object:Eyeshadow
+  name: Doge
+  company: Doge Corp.
+  color: Beige
+  image_uid: /media/W1siZiIsIjIwMTUvMDYvMjMvNjd5cGszdmNxc19waG90by5wbmciXV0?sha=fdfd784070cbff86

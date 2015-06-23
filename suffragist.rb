@@ -1,6 +1,24 @@
 require 'sinatra'
 require 'yaml/store'
+require 'dragonfly'
+require 'openssl'
 require_relative 'eyeshadow'
+
+# require_relative 'photo'
+
+class Photo
+  attr_accessor :image_uid
+  extend Dragonfly::Model
+  dragonfly_accessor :image
+end
+
+Dragonfly.app.configure do
+  # plugin :imagemagick
+  url_format '/media/:job'
+  secret 'blups'
+end
+
+use Dragonfly::Middleware
 
 get '/' do
   @title = 'Show me the Sparkle!'
@@ -16,15 +34,20 @@ end
 
 post '/cast' do
   @title = 'Thanks for casting your vote!'
-  #@vote  = params['vote']
   @name = params['name']
   @company = params['company']
   @color = params['color']
+  @photo = Photo.new
+  @photo.image = File.new('photos/photo.png')
+  @photo.image.save!
+  @photo.image_uid
+  #@photo_url = @photo.image.thumb("200x200").url
+  @photo_url = @photo.image.url
   p @name
   @store = YAML::Store.new 'eyeshadows.yml'
   @store.transaction do
     @store['casts'] ||= []
-    @store['casts'] << Eyeshadow.new(@name, @company, @color)
+    @store['casts'] << Eyeshadow.new(@name, @company, @color, @photo_url)
   end
   erb :cast
 end
