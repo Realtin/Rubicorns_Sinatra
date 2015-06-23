@@ -11,7 +11,7 @@ With 'Show me the Sparkle' I want to add all my Eyeshadows to a database and let
 ###ToDo
 * complete the Form
 * store pictures?
-* Styling
+* Styling  use [Material Design](http://materializecss.com)
 * use Sqlite or some other DB
 * Authentication / User Login
 * add the eyeshadow sugesstion system
