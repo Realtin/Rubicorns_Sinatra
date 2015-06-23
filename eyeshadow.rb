@@ -1,6 +1,5 @@
 class Eyeshadow
-
-  #Color = Struct.new(:base, :snd, :lightness, :finish)
+  # Color = Struct.new(:base, :snd, :lightness, :finish)
 
   attr_reader :name, :company, :color
 
@@ -9,9 +8,6 @@ class Eyeshadow
     @company = company
     @color = color
   end
-
 end
-
-
 
 # {name: Knickers in a Twist, company: Fyrinnae, color: [taupe, bronze], cw: orange, neutral: true, lightness: 5, tone: neutral }

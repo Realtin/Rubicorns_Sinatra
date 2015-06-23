@@ -1,2 +1,38 @@
 ---
-name: {}
+casts:
+- !ruby/object:Eyeshadow
+  name: eins
+  company: x
+  color: zwei
+- !ruby/object:Eyeshadow
+  name: flasche
+  company: x
+  color: durchsichtig
+- !ruby/object:Eyeshadow
+  name: Yup
+  company: Hello Waffle
+  color: Senf
+- !ruby/object:Eyeshadow
+  name: Galanga
+  company: Shiro
+  color: Schwarz
+- !ruby/object:Eyeshadow
+  name: Asteriks
+  company: Hello Waffle
+  color: Lila
+- !ruby/object:Eyeshadow
+  name: ''
+  company: ''
+  color: ''
+- !ruby/object:Eyeshadow
+  name: Candid Apple
+  company: Femme Fatale
+  color: Red-Green
+- !ruby/object:Eyeshadow
+  name: ''
+  company: ''
+  color: ''
+- !ruby/object:Eyeshadow
+  name: ''
+  company: ''
+  color: ''

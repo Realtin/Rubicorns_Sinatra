@@ -1,15 +1,12 @@
-<table class='table table-hover table-striped'>
-  <tr>
-    <th>Name</th>
-    <th>Company</th>
-    <th>Color</th>
-  </tr>
+<ul class="collection">
   <% @casts.each do |cast| %>
-    <tr>
-      <td><%= cast.name %></td>
-      <td><%= cast.company %></td>
-      <td><%= cast.color %></td>
-    </tr>
+    <li class="collection-item avatar">
+      <img src="https://placekitten.com/g/200/250" alt="" class="circle">
+      <span class="title"><%= cast.name %></span>
+      <p><%= cast.company %><br>
+         <%= cast.color %>
+      </p>
+      <a href="#!" class="secondary-content"><i class="mdi-action-grade"></i></a>
+    </li>
   <% end %>
-</table>
-<p><a href='/'>More!</a></p>
+</ul>

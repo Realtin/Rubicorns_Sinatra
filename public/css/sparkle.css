@@ -1,8 +1,7 @@
-.input-group {
-  margin-bottom: 10px;
+nav {
+  /*background-color: ##00bcd4 cyan;*/
 }
 
-.input-group-addon {
-  background-color: #3DFFBB;
-  color: white
+.left_thing {
+height: 100vh;
 }
