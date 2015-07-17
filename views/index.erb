@@ -1,38 +1,36 @@
-
-    <form action='cast' method='post'>
-        <div class="row">
-          <div class="input-field col s12">
-            <input type="text" class="validate" name="name">
-            <label for="name">Name</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="input-field col s12">
-            <input type="text" class="validate" name="company">
-            <label for="company">Company</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="input-field col s12">
-            <input type="text" class="validate" name="color">
-            <label for="color">Color</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="input-field col s12">
-            <select>
-              <!-- <option value="" disabled selected>Choose the finish</option> -->
-              <option value="1">Matte</option>
-              <option value="2">Shimmer</option>
-              <option value="3">Duochrome</option>
-              <option value="4">Sparkle</option>
-            </select>
-            <label>Materialize Select</label>
-          </div>
-        </div>
-        <div class="row">
-          <button type="submit" class="btn btn-default btn-lg" style="width: 100%;">
-            <span class="glyphicon glyphicon-sunglasses" aria-hidden="true">  Send</span>
-          </button>
-        </div>
-    </form>
+<div class="mdl-card mdl-shadow--2dp demo-card-wide">
+  <form action='cast' method='post'>
+    <div class="mdl-card__title">
+      <h2 class="mdl-card__title-text">Add new Eyeshadow</h2>
+    </div>
+    <div class="mdl-card__supporting-text">
+      <div class="mdl-textfield mdl-js-textfield textfield-demo">
+        <input class="mdl-textfield__input" type="text" name="name" />
+        <label class="mdl-textfield__label" for="name">Name...</label>
+      </div>
+      <div class="mdl-textfield mdl-js-textfield textfield-demo">
+        <input class="mdl-textfield__input" type="text" name="company" />
+        <label class="mdl-textfield__label" for="company">Company...</label>
+      </div>
+      <div class="mdl-textfield mdl-js-textfield textfield-demo">
+        <input class="mdl-textfield__input" type="text" name="color" />
+        <label class="mdl-textfield__label" for="color">Color...</label>
+      </div>
+      <div class="mdl-textfield mdl-js-textfield textfield-demo">
+        <input class="mdl-textfield__input" type="file" name="pic_url" />
+        <label class="mdl-textfield__label" for="pic_url">Link to Picture...</label>
+      </div>
+      <!-- <div class="mdl-textfield mdl-js-textfield textfield-demo">
+      <input class="mdl-textfield__input" type="file" name="pic_file" />
+      <label class="mdl-textfield__label" for="pic_file">Upload Picture...</label>
+      </div> -->
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+      <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+        Add
+      </button>
+    </div>
+    <div class="mdl-card__menu">
+    </div>
+  </form>
+</div>

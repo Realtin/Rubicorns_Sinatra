@@ -1,16 +1,28 @@
-<ul class="collection">
-  <% @casts.each do |cast| %>
-    <li class="collection-item avatar">
+<table class="mdl-data-table">
+  <thead>
+    <tr>
+      <th class="mdl-data-table__cell--non-numeric"></th>
+      <th class="mdl-data-table__cell--non-numeric">Name</th>
+      <th class="mdl-data-table__cell--non-numeric">Company</th>
+      <th class="mdl-data-table__cell--non-numeric">Color</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @casts.each do |cast| %>
+    <tr>
       <% if cast.image_uid != nil %>
+      <td class="mdl-data-table__cell--non-numeric">
         <img src=<%= cast.image_uid %> alt="" class="circle">
+      </td>
       <% else %>
+      <td class="mdl-data-table__cell--non-numeric">
         <img src="https://placekitten.com/g/200/250" alt="" class="circle">
-      <% end %>
-      <span class="title"><%= cast.name %></span>
-      <p><%= cast.company %><br>
-         <%= cast.color %>
-      </p>
-      <a href="#!" class="secondary-content"><i class="mdi-action-grade"></i></a>
-    </li>
-  <% end %>
-</ul>
+        <td>
+          <% end %>
+          <td class="mdl-data-table__cell--non-numeric"><%= cast.name %></td>
+          <td class="mdl-data-table__cell--non-numeric"><%= cast.company %></td>
+          <td class="mdl-data-table__cell--non-numeric"><%= cast.color %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>

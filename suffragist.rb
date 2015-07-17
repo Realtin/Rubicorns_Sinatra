@@ -28,20 +28,22 @@ end
 get '/results' do
   @title = 'Results so far:'
   @store = YAML::Store.new 'eyeshadows.yml'
-  @casts = @store.transaction { @store['casts'] || []}
+  @casts = @store.transaction { @store['casts'] || [] }
   erb :results
 end
 
 post '/cast' do
-  @title = 'Thanks for casting your vote!'
+  @title = 'Yeah!'
   @name = params['name']
   @company = params['company']
   @color = params['color']
+  p params
   @photo = Photo.new
+  # @photo.image = File.new(params['pic_url'])
   @photo.image = File.new('photos/photo.png')
   @photo.image.save!
   @photo.image_uid
-  #@photo_url = @photo.image.thumb("200x200").url
+  # @photo_url = @photo.image.thumb("200x200").url
   @photo_url = @photo.image.url
   p @name
   @store = YAML::Store.new 'eyeshadows.yml'

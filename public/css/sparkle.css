@@ -1,7 +1,45 @@
-nav {
-  /*background-color: ##00bcd4 cyan;*/
+body {
+
+  background: -webkit-linear-gradient(90deg, #E55D87 10%, #5FC3E4 90%); /* Chrome 10+, Saf5.1+ */
+  background:    -moz-linear-gradient(90deg, #E55D87 10%, #5FC3E4 90%); /* FF3.6+ */
+  background:     -ms-linear-gradient(90deg, #E55D87 10%, #5FC3E4 90%); /* IE10 */
+  background:      -o-linear-gradient(90deg, #E55D87 10%, #5FC3E4 90%); /* Opera 11.10+ */
+  background:         linear-gradient(90deg, #E55D87 10%, #5FC3E4 90%); /* W3C */
+
 }
 
-.left_thing {
-height: 100vh;
+.layout-transparent {
+  background: url('../assets/demos/transparent.jpg') center / cover;
 }
+.layout-transparent .mdl-layout__header,
+.layout-transparent .mdl-layout__drawer-button {
+  /* This background is dark, so we set text to white. Use 87% black instead if
+  your background is light. */
+  color: white;
+}
+
+.demo-card-wide.mdl-card {
+    width: 512px;
+  }
+  .demo-card-wide > .mdl-card__title {
+    color: #fff;
+    height: 176px;
+    background: url('../assets/demos/welcome_card.jpg') center / cover;
+  }
+  .demo-card-wide > .mdl-card__menu {
+    color: #fff;
+  }
+
+  .demo-card-image.mdl-card {
+    width: 256px;
+    height: 256px;
+    /*background: url('../assets/demos/image_card.jpg') center / cover;*/
+  }
+  .demo-card-image > .mdl-card__actions {
+    height: 52px;
+    padding: 16px;
+    background: rgba(0, 0, 0, 0.2);
+  }
+  .demo-card-image__filename {
+    color: #fff;
+  }

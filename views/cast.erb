@@ -1,17 +1,24 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='UTF-8' />
-    <title>Sparkle Sparkle</title>
-  </head>
-  <body class='container'>
-    <!-- <h1><%= @title %></h1> -->
-    <p>Eyeshadow: <%= @name %></p>
+<% if @photo.image_uid != nil %>
+<style>
+  .demo-card-image.mdl-card {
+    background: url('<%= @photo_url %>') center / cover;
+  }
+</style>
+<% end %>
+
+<div class="mdl-card mdl-shadow--2dp demo-card-image">
+  <div class="mdl-card__title mdl-card--expand"></div>
+  <div class="mdl-card__actions">
+    <span class="demo-card-image__filename">
+      <%= @name %>
+    </span>
+  </div>
+</div>
+
+    <!-- <p>Eyeshadow: <%= @name %></p>
     <p>Company: <%= @company %></p>
     <p>Color: <%= @color %></p>
     <% if @photo.image_uid != nil %>
       <p><img src=<%= @photo_url %> alt="" class="circle"></p>
     <% end %>
-    <p><a href='/results'>See the results!</a></p>
-  </body>
-</html>
+    <p><a href='/results'>See the results!</a></p> -->
