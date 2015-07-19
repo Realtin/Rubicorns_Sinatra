@@ -1,4 +1,4 @@
-<table class="mdl-data-table">
+<!-- <table class="mdl-data-table">
   <thead>
     <tr>
       <th class="mdl-data-table__cell--non-numeric"></th>
@@ -25,4 +25,33 @@
         </tr>
         <% end %>
       </tbody>
-    </table>
+    </table> -->
+<div class="grid">
+  <% @casts.each do |cast| %>
+      <div class="mdl-card mdl-shadow--2dp demo-card-image grid-item" style="background: no-repeat center/100% url(<%= cast.image_uid %>)">
+        <div class="mdl-card__title mdl-card--expand"></div>
+        <div class="mdl-card__actions">
+          <span class="demo-card-image__filename">
+            <%= cast.name %>
+          </span>
+        </div>
+    </div>
+  <% end %>
+</div>
+<script>
+  var elem = document.querySelector('.grid');
+  var iso = new Isotope( elem, {
+    // options
+    itemSelector: '.grid-item',
+    masonry: {
+      columnWidth: 50,
+      gutter: 10
+    }
+  });
+
+  // element argument can be a selector string
+  //   for an individual element
+  var iso = new Isotope( '.grid', {
+    // options
+  });
+</script>

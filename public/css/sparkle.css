@@ -12,7 +12,7 @@ body {
   font-family: 'Material Icons';
   font-style: normal;
   font-weight: 400;
-  src: url(/bower_components/material-design-icons/iconfont/MaterialIcons-Regular.eot); 
+  src: url(/bower_components/material-design-icons/iconfont/MaterialIcons-Regular.eot);
   src: local('Material Icons'),
        local('MaterialIcons-Regular'),
        url(/bower_components/material-design-icons/iconfont/MaterialIcons-Regular.woff2) format('woff2'),
@@ -55,3 +55,9 @@ body {
   .demo-card-image__filename {
     color: #fff;
   }
+
+.grid-item {
+  margin-bottom: 10px;
+  margin-left: 10px;
+  float: left;
+}
