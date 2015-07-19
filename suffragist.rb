@@ -34,18 +34,25 @@ end
 
 post '/cast' do
   @title = 'Yeah!'
+
+  # eyeshadow
   @name = params['name']
   @company = params['company']
   @color = params['color']
   p params
-  @photo = Photo.new
-  # @photo.image = File.new(params['pic_url'])
-  @photo.image = File.new('photos/photo.png')
-  @photo.image.save!
-  @photo.image_uid
-  # @photo_url = @photo.image.thumb("200x200").url
-  @photo_url = @photo.image.url
-  p @name
+  # photo
+  if !params['pic_url']
+    @photo = Photo.new
+    # @photo.image = File.new(params['pic_url'])
+    @photo.image = File.new('photos/photo.png')
+    @photo.image.save!
+    @photo.image_uid
+    # @photo_url = @photo.image.thumb("200x200").url
+    @photo_url = @photo.image.url
+  else
+    @photo_url = params['pic_url']
+  end 
+
   @store = YAML::Store.new 'eyeshadows.yml'
   @store.transaction do
     @store['casts'] ||= []

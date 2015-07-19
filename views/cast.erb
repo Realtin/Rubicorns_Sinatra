@@ -1,24 +1,18 @@
-<% if @photo.image_uid != nil %>
-<style>
-  .demo-card-image.mdl-card {
-    background: url('<%= @photo_url %>') center / cover;
-  }
-</style>
-<% end %>
+<div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet"></div>
+<div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet">
+  <style>
+    .demo-card-image.mdl-card {
+      background: url('<%= @photo_url %>') center / cover;
+    }
+  </style>
 
-<div class="mdl-card mdl-shadow--2dp demo-card-image">
-  <div class="mdl-card__title mdl-card--expand"></div>
-  <div class="mdl-card__actions">
-    <span class="demo-card-image__filename">
-      <%= @name %>
-    </span>
+  <div class="mdl-card mdl-shadow--2dp demo-card-image">
+    <div class="mdl-card__title mdl-card--expand"></div>
+    <div class="mdl-card__actions">
+      <span class="demo-card-image__filename">
+        <%= @name %>
+      </span>
+    </div>
   </div>
 </div>
-
-    <!-- <p>Eyeshadow: <%= @name %></p>
-    <p>Company: <%= @company %></p>
-    <p>Color: <%= @color %></p>
-    <% if @photo.image_uid != nil %>
-      <p><img src=<%= @photo_url %> alt="" class="circle"></p>
-    <% end %>
-    <p><a href='/results'>See the results!</a></p> -->
+<div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet"></div>

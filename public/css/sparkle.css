@@ -7,6 +7,18 @@ body {
   background:         linear-gradient(90deg, #E55D87 10%, #5FC3E4 90%); /* W3C */
 
 }
+/*
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/bower_components/material-design-icons/iconfont/MaterialIcons-Regular.eot); 
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'),
+       url(/bower_components/material-design-icons/iconfont/MaterialIcons-Regular.woff2) format('woff2'),
+       url(/bower_components/material-design-icons/iconfont/MaterialIcons-Regular.woff) format('woff'),
+       url(/bower_components/material-design-icons/iconfont/MaterialIcons-Regular.ttf) format('truetype');
+}*/
 
 .layout-transparent {
   background: url('../assets/demos/transparent.jpg') center / cover;
