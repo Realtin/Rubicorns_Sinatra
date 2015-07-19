@@ -29,6 +29,11 @@ get '/results' do
   @title = 'Results so far:'
   @store = YAML::Store.new 'eyeshadows.yml'
   @casts = @store.transaction { @store['casts'] || [] }
+  @companys = []
+  @casts.each do |cast|
+    @companys.push(cast.company)
+  end
+  @companys.uniq!
   erb :results
 end
 
@@ -51,7 +56,7 @@ post '/cast' do
     @photo_url = @photo.image.url
   else
     @photo_url = params['pic_url']
-  end 
+  end
 
   @store = YAML::Store.new 'eyeshadows.yml'
   @store.transaction do
