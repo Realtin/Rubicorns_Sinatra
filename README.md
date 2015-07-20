@@ -9,10 +9,11 @@ It's been getting difficult for me to keep track of them and to choose which one
 With 'Show me the Sparkle' I want to add all my Eyeshadows to a database and let the tool generate suggestions on what to pair together.
 
 ###ToDo
-* complete the Form
-* store pictures?
-* Styling  use [Material Design](http://materializecss.com)
-* use Sqlite or some other DB
-* Authentication / User Login
-* add the eyeshadow sugesstion system
-* Tests!!!!
+
+[ ] edit and delete existing shadows
+[ ] show more information about the eyeshadow on click
+[ ] upload pictures
+[x] Styling  use [Material Design](http://www.getmdl.io/index.html)
+[ ] Authentication / User Login
+[ ] add the eyeshadow sugesstion system
+[ ] Tests!!!!
