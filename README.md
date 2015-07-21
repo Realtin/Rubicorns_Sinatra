@@ -11,6 +11,7 @@ With 'Show me the Sparkle' I want to add all my Eyeshadows to a database and let
 ###ToDo
 
 * [ ] edit and delete existing shadows
+* [ ] figure out how to handle the colors attribute
 * [ ] show more information about the eyeshadow on click
 * [ ] upload pictures
 * [x] Styling  use [Material Design](http://www.getmdl.io/index.html)
